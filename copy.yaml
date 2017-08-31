@@ -1,6 +1,6 @@
 ---
 
-- hosts: project
+- hosts: all
 
   user: root
 

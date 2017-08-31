@@ -2,7 +2,7 @@
 
 - hosts: project
 
-  user: golanger
+  user: root
 
   tasks:
 

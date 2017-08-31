@@ -8,4 +8,4 @@
 
     - name: playbook_copy
 
-      copy: desc=/etc/hosts   src=/tmp
+      copy: src=/etc/hosts   dest=/tmp

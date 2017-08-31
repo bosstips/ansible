@@ -1,0 +1,11 @@
+---
+
+- hosts: project
+
+  user: golanger
+
+  tasks:
+
+    - name: playbook_copy
+
+      copy: desc=/etc/hosts   src=/tmp

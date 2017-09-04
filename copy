@@ -9,5 +9,3 @@
     - name: playbook_copy
 
       copy: desc=/etc/hosts   src=/tmp
-git config --global user.name "huzailing"
-git config --global user.email "huzailingcn@163.com"

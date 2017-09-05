@@ -3,18 +3,11 @@ ocker swarm join \
     --token SWMTKN-1-4buxd4l05ban2lepw5u7i504jywonib22tgi7g12rbmugdxqgc-9qhf0d7wxz3c7w1zb11c89ctb \
     10.0.0.234:2377
 
-121.196.212.211   ansible_ssh_user=root 
-116.62.229.56     ansible_ssh_user=root 
-116.62.158.213    ansible_ssh_user=root 
-116.62.155.17     ansible_ssh_user=root
 
 
 docker swarm join \
     --token SWMTKN-1-4ly51ch330vlvgkd23yzeyydaq7j9w3sx60vh3owjac60w8qwu-7wq7ilgtpek1u9vqmvvi8l10y \
     10.0.0.230:2377
 
-116.62.154.126
-116.62.151.156 --------
-121.196.202.39
 
 

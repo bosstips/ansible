@@ -1,11 +1,24 @@
 
-ocker swarm join \
+ansible sw -m shell -a 'docker service ps helloworld'
+
+
+查看服务     docker service ls
+
+启动3个副本  docker service scale helloworld=3
+
+查看  docker service inspect --pretty helloworld
+
+启动一个服务 docker service create --replicas 1 --name helloworld alpine   2v0chx4nlw08qqm8nqs7mianz
+
+
+
+新加入一个集群   docker swarm join \
     --token SWMTKN-1-4buxd4l05ban2lepw5u7i504jywonib22tgi7g12rbmugdxqgc-9qhf0d7wxz3c7w1zb11c89ctb \
     10.0.0.234:2377
 
 
-
-docker swarm join \
+master
+ docker swarm join \
     --token SWMTKN-1-4ly51ch330vlvgkd23yzeyydaq7j9w3sx60vh3owjac60w8qwu-7wq7ilgtpek1u9vqmvvi8l10y \
     10.0.0.230:2377
 

@@ -1,4 +1,8 @@
-
+##
+##
+##
+##
+##
 ansible sw -m shell -a 'docker service ps helloworld'
 
 

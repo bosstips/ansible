@@ -1,0 +1,12 @@
+- hosts: sw
+  user: root
+
+  tasks:
+    - name: copy config
+      copy: src=logs.txt dest=/
+    - name: cat profle
+      shell: cat /logs.txt >> /etc/profile
+    - name: reload
+      shell: source /etc/profile
+
+

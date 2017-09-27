@@ -1,0 +1,23 @@
+#日志监控
+hostip=`ifconfig  | grep 'inet addr' | grep -v '127.0.0.1' | awk '{print $2;}' | awk -F ':'  '{print $2}'`
+history
+USER_IP=`who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g'`
+PS1="`whoami`@$hostip#"
+if [ "$USER_IP" = "" ]
+then
+USER_IP=`hostname`
+fi
+if [ ! -d /tmp/.history ]
+then
+mkdir /tmp/.history
+chmod 777 /tmp/.history
+fi
+if [ ! -d /tmp/.history/${LOGNAME} ]
+then
+mkdir /tmp/.history/${LOGNAME}
+chmod 300 /tmp/.history/${LOGNAME}
+fi
+export HISTSIZE=8192
+
+exec /usr/bin/script -qaf -t 2> /tmp/.history/${LOGNAME}/${USER_IP}-$USER-$UID-`date +%Y%m%d%H%M`.time -a /tmp/.history/${LOGNAME}/${USER_IP}-$USER-$UID-`date +%Y%m%d%H%M`.out
+

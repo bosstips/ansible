@@ -1,6 +1,6 @@
 ---
 
-- hosts: all
+- hosts: sw
 
   user: root
 
@@ -8,4 +8,4 @@
 
     - name: playbook_copy
 
-      copy: src=/etc/hosts   dest=/tmp
+      copy: src=sum3.go   dest=/tmp

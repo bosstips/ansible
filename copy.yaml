@@ -1,11 +1,6 @@
 ---
-
-- hosts: sw
-
-  user: root
-
+- hosts: all
+  remote_user: root
   tasks:
-
-    - name: playbook_copy
-
-      copy: src=/etc/hosts   dest=/tmp
+  - name: Copy the /etc/hosts
+copy: src=/etc/hosts dest=/etc/hosts

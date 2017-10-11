@@ -8,4 +8,4 @@
 
     - name: playbook_copy
 
-      copy: src=sum3.go   dest=/tmp
+      copy: src=/etc/hosts   dest=/tmp

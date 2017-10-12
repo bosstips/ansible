@@ -1,7 +1,0 @@
-- hosts: all
-
-  user: root
-  tasks:
-    - name: 拷贝hosts
-      copy: src=/etc/hosts  dest=/home/
-

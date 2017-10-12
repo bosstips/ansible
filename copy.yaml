@@ -1,11 +1,7 @@
----
-
-- hosts: sw
+- hosts: all
 
   user: root
-
   tasks:
+    - name: 拷贝hosts
+      copy: src=/etc/hosts  dest=/home/
 
-    - name: playbook_copy
-
-      copy: src=sum3.go   dest=/tmp
